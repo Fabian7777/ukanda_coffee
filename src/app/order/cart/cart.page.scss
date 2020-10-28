@@ -1,0 +1,171 @@
+ion-content {
+    --ion-background-color: #fff9ee !important;
+    font-family: sans-serif;
+}
+
+
+/* track */
+
+.track {
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #442a15;
+}
+
+.track .step {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+
+.track .step.active:before {
+    background: #7D5C3B;
+}
+
+.track .step::before {
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+
+.track .step.active .icon {
+    background: #7D5C3B;
+    color: #fff
+}
+
+.track .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+
+.track .step.active .text {
+    font-weight: 400;
+    color: #000
+}
+
+.track .text {
+    display: block;
+    margin-top: 7px
+}
+
+.itemside {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.itemside .aside {
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.img-sm {
+    width: 80px;
+    height: 80px;
+    padding: 7px
+}
+
+ul.row,
+ul.row-sm {
+    list-style: none;
+    padding: 0
+}
+
+.itemside .info {
+    padding-left: 15px;
+    padding-right: 7px
+}
+
+.itemside .title {
+    display: block;
+    margin-bottom: 5px;
+    color: #212529
+}
+
+
+/* cart */
+
+.card {
+    margin: auto;
+    width: 100%;
+    border-radius: 20px
+}
+
+#orderno {
+    padding: 1vh 2vh 0;
+    font-size: smaller
+}
+
+.gap .col-2 {
+    background-color: #fff9ee;
+    width: 1.2rem;
+    padding: 1.2rem;
+    margin-top: -2.5rem;
+    border-radius: 1.2rem;
+    border-bottom: 1px solid rgb(214, 214, 214)
+}
+
+.title {
+    display: flex;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12%;
+    margin-top: -2.5rem;
+}
+
+.main {
+    padding: 0 2rem;
+    margin-top: -2.5rem;
+}
+
+.main img {
+    border-radius: 7px
+}
+
+.main p {
+    margin-bottom: 0;
+    font-size: 0.75rem
+}
+
+#sub-title p {
+    margin: 1vh 0 2vh 0;
+    font-size: 1rem
+}
+
+.row-main {
+    padding: 1.5vh 0;
+    align-items: center
+}
+
+hr {
+    margin: 1rem -1vh;
+    border-top: 1px solid rgb(214, 214, 214)
+}
+
+.total {
+    font-size: 1rem
+}

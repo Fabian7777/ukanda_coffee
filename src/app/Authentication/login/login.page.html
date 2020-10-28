@@ -1,0 +1,70 @@
+<app-share></app-share>
+
+<ion-content fullscreen="true">
+
+    <div class="">
+        <div class="">
+            <div class="card p-5">
+                <div class="logo mb-3" style="display: flex;">
+                    <img src="assets/images/logo.png" style="background-color: #fff; width: 6rem; height: 6rem; border-radius: 50%;">
+
+                    <h4 class="ml-2 mt-4" style="color: #fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                        UKANDA COFFEE
+                    </h4>
+                </div>
+
+
+            </div>
+            <div class="card two px-5 py-4">
+
+                <div style="margin-left: -1.8rem; margin-right: -2rem;">
+                    <ion-item>
+                        <ion-label position="stacked">Email <span class="text-danger">*</span> </ion-label>
+                        <ion-input [(ngModel)]="loginData.email" type="email" autocomplete="off" required></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Password <span class="text-danger">*</span> </ion-label>
+                        <ion-input [(ngModel)]="loginData.password" type="password"></ion-input>
+                    </ion-item>
+                </div>
+
+            </div>
+
+            <ion-button color="mygreen" expand="block" style="height: 40px; font-size: 14px; margin-top: -10px;" (click)="login()">
+                LOGIN
+            </ion-button>
+
+            <div class="text-muted" style="text-align: center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 10px; font-weight: 500; font-size: 12px;">
+                OR LOGIN WITH
+            </div>
+
+            <ion-grid style="margin-left: -.5rem; margin-right: -.5rem;">
+                <ion-row>
+                    <ion-col>
+
+                        <ion-button expand="block" color="facebook" shape="round" (click)="facebook_login()">
+                            <ion-icon name="logo-facebook" slot="start"></ion-icon> Facebook
+                        </ion-button>
+
+                    </ion-col>
+                    <ion-col>
+
+                        <ion-button expand="block" color="gmail" shape="round">
+                            <ion-icon name="logo-google" slot="start"></ion-icon> Gmail
+                        </ion-button>
+
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <div style="text-align: left; margin: 10px;">
+                <p>
+                    Don't have an account <a href="javascript:void(0)" style="font-weight: 600;" (click)="account_selection_Modal()">Register?</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+</ion-content>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "518857348125",
+    "firebase_url": "https://ukanda-a3632.firebaseio.com",
+    "project_id": "ukanda-a3632",
+    "storage_bucket": "ukanda-a3632.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518857348125:android:25e6732024189074bea2f4",
+        "android_client_info": {
+          "package_name": "com.ziscotech.ukanda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518857348125-sf913soue4igrsqgg7r9uq668c9uqk8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARoWYiQdAvUYbGbNlg7M5yCndS7KiUOQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518857348125-sf913soue4igrsqgg7r9uq668c9uqk8i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "518857348125-gnmksjugujal0rrppifp20rs4r1an78m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ziscotech.ukanda"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

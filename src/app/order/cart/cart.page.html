@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<app-share></app-share>
+
+<ion-content>
+
+    <div class="track">
+        <div class="step active"> <span class="icon"> <i class="fa fa-cart-plus"></i> </span> <span class="text">Order
+      </span> </div>
+        <div class="step active"> <span class="icon"> <i class="fa fa-check-square"></i> </span> <span class="text"> Review</span>
+        </div>
+        <div class="step"> <span class="icon"> <i class="fa fa-calendar-check" aria-hidden="true"></i> </span> <span class="text"> Payment</span> </div>
+        <div class="step"> <span class="icon"> <i class="fa fa-plane"></i> </span> <span class="text">Shipping</span> </div>
+    </div>
+
+    <div class="card mt-2 mb-3">
+        <div class="col d-flex"><span class="text-muted" id="orderno">order #546924</span></div>
+        <div class="gap">
+            <div class="col-2 d-flex mx-auto"> </div>
+        </div>
+        <div class="title mx-auto"> My cart </div>
+        <div class="main"> <span id="sub-title">
+              <p><b>Cart Summary</b></p>
+          </span>
+            <div class="row row-main">
+                <div class="col-2">
+                    <i class="fa fa-cart-plus" aria-hidden="true" style="color: #7D5C3B; font-size: 18px;"></i>
+                </div>
+                <div class="col-6">
+                    <div class="row d-flex">
+                        <p>
+                            <b>Green coffee (AA)</b>
+                        </p>
+                    </div>
+                    <div class="row d-flex">
+                        <p class="text-muted">
+                            Dark roast-35oz-5Packets
+                        </p>
+                    </div>
+                </div>
+                <div class="col-2 d-flex justify-content-end">
+                    <p><b>$5.90</b></p>
+                </div>
+                <div class="col-2 d-flex justify-content-end">
+                    <i class="fa fa-times-circle" aria-hidden="true" style="color: #CA0B00; font-size: 1.2rem;"></i>
+                </div>
+
+            </div>
+
+            <hr>
+            <div class="total">
+                <div class="row">
+                    <div class="col"> <b> Total:</b> </div>
+                    <div class="col d-flex justify-content-end"> <b>$20.95</b> </div>
+                </div>
+                <ion-button class="mt-2" color="coffeelight" expand="full" style="height: 40px; font-size: 14px;" (click)="make_payment()">
+                    Make Payment
+                    <ion-ripple-effect></ion-ripple-effect>
+                </ion-button>
+            </div>
+        </div>
+    </div>
+
+
+</ion-content>

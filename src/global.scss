@@ -9,18 +9,255 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+:root {
+    --ion-color-coolp: #800080;
+    --ion-color-coolp-rgb: 128, 0, 128;
+    --ion-color-coolp-contrast: #ffffff;
+    --ion-color-coolp-contrast-rgb: 255, 255, 255;
+    --ion-color-coolp-shade: #710071;
+    --ion-color-coolp-tint: #8d1a8d;
+}
+
+.ion-color-coolp {
+    --ion-color-base: var(--ion-color-coolp);
+    --ion-color-base-rgb: var(--ion-color-coolp-rgb);
+    --ion-color-contrast: var(--ion-color-coolp-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-coolp-contrast-rgb);
+    --ion-color-shade: var(--ion-color-coolp-shade);
+    --ion-color-tint: var(--ion-color-coolp-tint);
+}
+
+ :root {
+    --ion-color-mygreen: #228B22;
+    --ion-color-mygreen-rgb: 34, 139, 34;
+    --ion-color-mygreen-contrast: #ffffff;
+    --ion-color-mygreen-contrast-rgb: 255, 255, 255;
+    --ion-color-mygreen-shade: #1e7a1e;
+    --ion-color-mygreen-tint: #389738;
+}
+
+.ion-color-mygreen {
+    --ion-color-base: var(--ion-color-mygreen);
+    --ion-color-base-rgb: var(--ion-color-mygreen-rgb);
+    --ion-color-contrast: var(--ion-color-mygreen-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-mygreen-contrast-rgb);
+    --ion-color-shade: var(--ion-color-mygreen-shade);
+    --ion-color-tint: var(--ion-color-mygreen-tint);
+}
+
+ :root {
+    --ion-color-twitter: #00acee;
+    --ion-color-twitter-rgb: 0, 172, 238;
+    --ion-color-twitter-contrast: #ffffff;
+    --ion-color-twitter-contrast-rgb: 0, 0, 0;
+    --ion-color-twitter-shade: #0097d1;
+    --ion-color-twitter-tint: #1ab4f0;
+}
+
+.ion-color-twitter {
+    --ion-color-base: var(--ion-color-twitter);
+    --ion-color-base-rgb: var(--ion-color-twitter-rgb);
+    --ion-color-contrast: var(--ion-color-twitter-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-twitter-contrast-rgb);
+    --ion-color-shade: var(--ion-color-twitter-shade);
+    --ion-color-tint: var(--ion-color-twitter-tint);
+}
+
+ :root {
+    --ion-color-instagram: #c32aa3;
+    --ion-color-instagram-rgb: 195, 42, 163;
+    --ion-color-instagram-contrast: #ffffff;
+    --ion-color-instagram-contrast-rgb: 255, 255, 255;
+    --ion-color-instagram-shade: #ac258f;
+    --ion-color-instagram-tint: #c93fac;
+}
+
+.ion-color-instagram {
+    --ion-color-base: var(--ion-color-instagram);
+    --ion-color-base-rgb: var(--ion-color-instagram-rgb);
+    --ion-color-contrast: var(--ion-color-instagram-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-instagram-contrast-rgb);
+    --ion-color-shade: var(--ion-color-instagram-shade);
+    --ion-color-tint: var(--ion-color-instagram-tint);
+}
+
+ :root {
+    --ion-color-linkedin: #0e76a8;
+    --ion-color-linkedin-rgb: 14, 118, 168;
+    --ion-color-linkedin-contrast: #ffffff;
+    --ion-color-linkedin-contrast-rgb: 255, 255, 255;
+    --ion-color-linkedin-shade: #0c6894;
+    --ion-color-linkedin-tint: #2684b1;
+}
+
+.ion-color-linkedin {
+    --ion-color-base: var(--ion-color-linkedin);
+    --ion-color-base-rgb: var(--ion-color-linkedin-rgb);
+    --ion-color-contrast: var(--ion-color-linkedin-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-linkedin-contrast-rgb);
+    --ion-color-shade: var(--ion-color-linkedin-shade);
+    --ion-color-tint: var(--ion-color-linkedin-tint);
+}
+
+ :root {
+    --ion-color-whatsapp: #25d366;
+    --ion-color-whatsapp-rgb: 37, 211, 102;
+    --ion-color-whatsapp-contrast: #000000;
+    --ion-color-whatsapp-contrast-rgb: 0, 0, 0;
+    --ion-color-whatsapp-shade: #21ba5a;
+    --ion-color-whatsapp-tint: #3bd775;
+}
+
+.ion-color-whatsapp {
+    --ion-color-base: var(--ion-color-whatsapp);
+    --ion-color-base-rgb: var(--ion-color-whatsapp-rgb);
+    --ion-color-contrast: var(--ion-color-whatsapp-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb);
+    --ion-color-shade: var(--ion-color-whatsapp-shade);
+    --ion-color-tint: var(--ion-color-whatsapp-tint);
+}
+
+ :root {
+    --ion-color-facebook: #3b5998;
+    --ion-color-facebook-rgb: 59, 89, 152;
+    --ion-color-facebook-contrast: #ffffff;
+    --ion-color-facebook-contrast-rgb: 255, 255, 255;
+    --ion-color-facebook-shade: #344e86;
+    --ion-color-facebook-tint: #4f6aa2;
+}
+
+.ion-color-facebook {
+    --ion-color-base: var(--ion-color-facebook);
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb);
+    --ion-color-contrast: var(--ion-color-facebook-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb);
+    --ion-color-shade: var(--ion-color-facebook-shade);
+    --ion-color-tint: var(--ion-color-facebook-tint);
+}
+
+:root {
+    --ion-color-gmail: #D44638;
+    --ion-color-gmail-rgb: 212, 70, 56;
+    --ion-color-gmail-contrast: #ffffff;
+    --ion-color-gmail-contrast-rgb: 255, 255, 255;
+    --ion-color-gmail-shade: #bb3e31;
+    --ion-color-gmail-tint: #d8594c;
+}
+
+.ion-color-gmail {
+    --ion-color-base: var(--ion-color-gmail);
+    --ion-color-base-rgb: var(--ion-color-gmail-rgb);
+    --ion-color-contrast: var(--ion-color-gmail-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-gmail-contrast-rgb);
+    --ion-color-shade: var(--ion-color-gmail-shade);
+    --ion-color-tint: var(--ion-color-gmail-tint);
+}
+
+:root {
+    --ion-color-coffee: #f2e8d1;
+    --ion-color-coffee-rgb: 242, 232, 209;
+    --ion-color-coffee-contrast: #000000;
+    --ion-color-coffee-contrast-rgb: 0, 0, 0;
+    --ion-color-coffee-shade: #d5ccb8;
+    --ion-color-coffee-tint: #f3ead6;
+}
+
+.ion-color-coffee {
+    --ion-color-base: var(--ion-color-coffee);
+    --ion-color-base-rgb: var(--ion-color-coffee-rgb);
+    --ion-color-contrast: var(--ion-color-coffee-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-coffee-contrast-rgb);
+    --ion-color-shade: var(--ion-color-coffee-shade);
+    --ion-color-tint: var(--ion-color-coffee-tint);
+}
+
+:root {
+    --ion-color-coffeedark: #442a15;
+    --ion-color-coffeedark-rgb: 68, 42, 21;
+    --ion-color-coffeedark-contrast: #ffffff;
+    --ion-color-coffeedark-contrast-rgb: 255, 255, 255;
+    --ion-color-coffeedark-shade: #3c2512;
+    --ion-color-coffeedark-tint: #573f2c;
+}
+
+.ion-color-coffeedark {
+    --ion-color-base: var(--ion-color-coffeedark);
+    --ion-color-base-rgb: var(--ion-color-coffeedark-rgb);
+    --ion-color-contrast: var(--ion-color-coffeedark-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-coffeedark-contrast-rgb);
+    --ion-color-shade: var(--ion-color-coffeedark-shade);
+    --ion-color-tint: var(--ion-color-coffeedark-tint);
+}
+
+:root {
+    --ion-color-coffeelight: #7D5C3B;
+    --ion-color-coffeelight-rgb: 125, 92, 59;
+    --ion-color-coffeelight-contrast: #ffffff;
+    --ion-color-coffeelight-contrast-rgb: 255, 255, 255;
+    --ion-color-coffeelight-shade: #6e5134;
+    --ion-color-coffeelight-tint: #8a6c4f;
+}
+
+.ion-color-coffeelight {
+    --ion-color-base: var(--ion-color-coffeelight);
+    --ion-color-base-rgb: var(--ion-color-coffeelight-rgb);
+    --ion-color-contrast: var(--ion-color-coffeelight-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-coffeelight-contrast-rgb);
+    --ion-color-shade: var(--ion-color-coffeelight-shade);
+    --ion-color-tint: var(--ion-color-coffeelight-tint);
+}
+
+ion-button {
+    text-transform: none;
+}
+
+.sharemodalcss {
+    --background: #ffffff;
+    height: 70%;
+    top: 30%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    // position: absolute; 
+    // display: block;  
+}
+
+.registermodalcss {
+    --background: #ffffff;
+    height: 60%;
+    top: 40%;
+    //  border-top-left-radius: 15px;
+    //  border-top-right-radius: 15px;
+}
+
+.rentpaymentmodalcss {
+    --background: #ffffff;
+    height: 70%;
+    top: 40%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.custom-loader-class {
+    --background: #6e5134;
+    --spinner-color: #f2e8d1;
+    color: white;
+}

@@ -1,29 +1,48 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+    <ion-split-pane contentId="main-content">
+        <ion-menu contentId="main-content" type="overlay">
+            <ion-content fullscreen>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
+                <div style="margin-left: -.5rem; margin-right: -.5rem;">
+                    <div>
+                        <div class="card89 p-5">
+                            <div class="logo mt-4 mb-3">
+                                <img src="assets/images/logo.png" style="background-color: #fff; width: 50px; height: 50px; border-radius: 50%;">
+                            </div>
+                            <div>
+                                <p class="mb-1">
+                                    Ukanda Coffee
+                                </p>
+                                <h6 class="mb-5 text-white">
+                                    <sup><i class="fa fa-quote-left" aria-hidden="true" style="font-size: 10px;"></i></sup> From our farms to your cup <sup><i class="fa fa-quote-right" aria-hidden="true" style="font-size: 10px;"></i></sup>
+                                </h6>
+                            </div>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
 
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+                        </div>
+                        <div class="card card89 two bg-white px-5 py-4 mb-3">
+
+                            <ion-list id="inbox-list" style="margin-top: -1rem; margin-left: -1rem; margin-right: -1rem;">
+
+                                <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+                                    <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+                                        <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+                                        <ion-label>{{ p.title }}</ion-label>
+                                    </ion-item>
+                                </ion-menu-toggle>
+
+                                <ion-button color="coffeelight" shape="round" expand="full">
+                                    <ion-icon name="person" slot="start"></ion-icon> My account
+                                </ion-button>
+
+                            </ion-list>
+                        </div>
+                    </div>
+                </div>
+
+
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
 </ion-app>

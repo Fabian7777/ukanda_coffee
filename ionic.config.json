@@ -1,5 +1,7 @@
 {
   "name": "ukanda_latest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

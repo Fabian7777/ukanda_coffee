@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<app-share></app-share>
+
+<ion-content>
+
+    <div class="track">
+        <div class="step active"> <span class="icon"> <i class="fa fa-cart-plus"></i> </span> <span class="text">Order
+      </span> </div>
+        <div class="step"> <span class="icon"> <i class="fa fa-check-square"></i> </span> <span class="text"> Review</span>
+        </div>
+        <div class="step"> <span class="icon"> <i class="fa fa-calendar-check" aria-hidden="true"></i> </span> <span class="text"> Payment</span> </div>
+        <div class="step"> <span class="icon"> <i class="fa fa-plane"></i> </span> <span class="text">Shipping</span> </div>
+    </div>
+
+    <div class="mr-2 ml-2" style="color: #442a15;">
+
+        <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="alert alert-success" role="alert">
+                    <div class="d-flex"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                        <div class="mx-2" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 400;">Do you need help ordering coffee? Click here to get more help.
+
+                            <ion-button color="coffeelight" expand="full" style="height: 30px; font-size: 14px;" (click)="show_guide()">
+                                Order guide
+                                <ion-ripple-effect></ion-ripple-effect>
+                            </ion-button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 style="font-size: 14px; margin-bottom: -10px;">Order your coffee</h5>
+        <hr>
+
+        <ion-item>
+            <ion-label position="stacked">Coffee type</ion-label>
+            <ion-select placeholder="Select coffee" interface="action-sheet">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Coffee grade</ion-label>
+            <ion-select placeholder="Select coffee" class="custom-options" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Coffee quantity</ion-label>
+            <ion-select placeholder="Select coffee" interface="popover">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Number of packets <span class="text-danger">*</span> </ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+
+    </div>
+
+    <ion-button class="mt-2" color="coffeelight" expand="full" style="height: 40px; font-size: 14px;">
+        <ion-badge color="danger">50</ion-badge> &nbsp;
+        <ion-icon name="cart" slot="start"></ion-icon> Add to cart
+        <ion-ripple-effect></ion-ripple-effect>
+    </ion-button>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card">
+
+                <div class="row">
+                    <div class="col-6 border-right">
+                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                            <h4 class="m-1">Account</h4>
+                            <p class="m-0">Personal</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                            <h4 class="m-1">Order</h4>
+                            <p class="m-0">#SJM1265</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</ion-content>

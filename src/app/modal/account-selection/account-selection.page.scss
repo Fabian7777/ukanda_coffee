@@ -1,0 +1,48 @@
+ion-content {
+    --ion-background-color: #ECEFF1 !important;
+    font-family: sans-serif;
+}
+
+ion-item {
+    --ion-background-color: #ECEFF1;
+}
+
+ion-card-header {
+    //background-color: map-get($colors, mygreen);
+    background-color: var(--ion-color-coffeedark);
+    color: #ffffff;
+}
+
+ion-card-content {
+    //padding: 0px 16px;
+    max-height: 0px;
+    background-color: #fff;
+    color: #000000;
+}
+
+.modal-content {
+    background: transparent;
+    border: none;
+    //padding: 0 19px;
+}
+
+.modal-header {
+    border: none
+}
+
+.modal-body {
+    border: none;
+    background-color: #ECEFF1;
+    border-radius: 8px;
+    padding-bottom: 50px
+}
+
+.modal-footer {
+    border: none;
+    //flex-direction: column;
+    background-color: #ECEFF1;
+    //  margin: 0 19px;
+    position: relative;
+    width: 100%;
+    margin-left: -.5rem;
+}

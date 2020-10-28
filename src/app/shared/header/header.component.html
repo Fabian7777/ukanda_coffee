@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="coffeedark">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{dashtitle}}</ion-title>
+        <ion-buttons slot="end" style="background-color: #442a15;">
+
+            <ion-button class="badge-button" routerLink="/notifications/" routerDirection="forward" style="margin-right: -10px;">
+                <ion-icon size="large" name="chatbox-ellipses-outline">
+                </ion-icon>
+                <ion-badge [class.badge-one]="unread < 10" [class.badge-two]="unread >= 10" color="danger">{{ unread }}
+                </ion-badge>
+            </ion-button>
+
+            <ion-button class="badge-button" routerLink="/notifications/" routerDirection="forward">
+                <ion-icon size="large" name="notifications-circle-outline">
+                </ion-icon>
+                <ion-badge [class.badge-one]="unread < 10" [class.badge-two]="unread >= 10" color="danger">{{ unread }}
+                </ion-badge>
+            </ion-button>
+
+            <ion-button class="badge-button" routerLink="/notifications/" routerDirection="forward" style="margin-left: -.5rem;">
+                <ion-icon size="large" name="cart">
+                </ion-icon>
+                <ion-badge [class.badge-one]="unread < 10" [class.badge-two]="unread >= 10" color="danger">{{ unread }}
+                </ion-badge>
+            </ion-button>
+
+        </ion-buttons>
+
+
+    </ion-toolbar>
+</ion-header>

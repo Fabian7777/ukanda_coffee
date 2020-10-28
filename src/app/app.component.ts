@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -13,38 +12,42 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Make order',
+      url: '/order',
+      icon: 'cart'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Check out',
+      url: '/cart',
+      icon: 'basket'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Transactions',
+      url: '/transactions',
+      icon: 'calendar'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: 'Orders',
+      url: '/orders-history',
+      icon: 'bookmarks'
     },
     {
-      title: 'Spam',
+      title: 'FAQs',
+      url: '/faqs',
+      icon: 'help-circle'
+    },
+    {
+      title: "Farmer's tip",
       url: '/folder/Spam',
-      icon: 'warning'
+      icon: 'cash'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-
+ 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -54,16 +57,16 @@ export class AppComponent implements OnInit {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
+    this.statusBar.overlaysWebView(false);
+    this.statusBar.backgroundColorByHexString('#573f2c');
+    this.splashScreen.hide();
+
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
+    const path = window.location.pathname;
     if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+      this.selectedIndex = this.appPages.findIndex(page => page.url.toLowerCase() === path.toLowerCase());
     }
   }
 }

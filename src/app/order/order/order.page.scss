@@ -1,0 +1,140 @@
+ion-content {
+    --ion-background-color: #fff9ee !important;
+    font-family: sans-serif;
+}
+
+.card {
+    margin-bottom: 30px;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    // letter-spacing: .5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05)
+}
+
+
+/* track */
+
+.track {
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #442a15;
+}
+
+.track .step {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+
+.track .step.active:before {
+    background: #7D5C3B;
+}
+
+.track .step::before {
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+
+.track .step.active .icon {
+    background: #7D5C3B;
+    color: #fff
+}
+
+.track .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+
+.track .step.active .text {
+    font-weight: 400;
+    color: #000
+}
+
+.track .text {
+    display: block;
+    margin-top: 7px
+}
+
+.itemside {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.itemside .aside {
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.img-sm {
+    width: 80px;
+    height: 80px;
+    padding: 7px
+}
+
+ul.row,
+ul.row-sm {
+    list-style: none;
+    padding: 0
+}
+
+.itemside .info {
+    padding-left: 15px;
+    padding-right: 7px
+}
+
+.itemside .title {
+    display: block;
+    margin-bottom: 5px;
+    color: #212529
+}
+
+
+/* Radio buttons */
+
+.padding {
+    padding: 5px
+}
+
+.block {
+    background: #fff;
+    border-width: 0;
+    border-radius: .25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+    margin-bottom: 1.5rem
+}
+
+
+/* Popover Interface: set color for the popover using Item's CSS variables */
+
+.my-custom-interface .brown-option {
+    --color: #5e3e2c;
+    --color-hover: #362419;
+}

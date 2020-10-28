@@ -1,0 +1,8 @@
+<ion-card style="width: 100%; margin-top: -.2rem;">
+    <ion-card-header (click)="toggleaccording()" text-wrap color="coffeedark" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 500;">
+        {{title}}
+    </ion-card-header>
+    <ion-card-content #cc>
+        <figure [innerHTML]="mydata"></figure>
+    </ion-card-content>
+</ion-card>

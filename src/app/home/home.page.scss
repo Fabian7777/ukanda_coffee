@@ -1,0 +1,165 @@
+.card {
+    width: 100%;
+    border: none;
+    height: auto;
+}
+
+.part-1 {
+    background-color: #8a6c4f;
+    padding: 20px;
+    height: 200px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    color: #fff;
+    height: auto;
+}
+
+.part-2 {
+    height: 150px;
+    display: flex;
+}
+
+.part-0 {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.work {
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 4px;
+    width: 173px;
+    font-size: 14px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    top: -16px;
+    position: absolute;
+    background: var(--ion-color-mygreen);
+}
+
+.alexa span {
+    font-weight: 300;
+}
+
+
+/* second slide */
+
+.circle {
+    height: 56px;
+    width: 56px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: var(--ion-color-mygreen);
+    position: relative;
+    left: 28px;
+    top: 66px;
+    -webkit-transition: height 0.25s ease, width 0.25s ease;
+    transition: height 0.25s ease, width 0.25s ease;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.circle i {
+    margin-left: 17px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.circle:before,
+.circle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.circle:before {
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite;
+}
+
+.circle:after {
+    -webkit-animation: ripple 2s linear 1s infinite;
+    animation: ripple 2s linear 1s infinite;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    75% {
+        -webkit-transform: scale(1.75);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.75);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+/* profile */
+
+.card1 {
+    background-color: #8a6c4f;
+    width: 100%;
+    border-radius: 20px;
+    color: #fff;
+    height: auto;
+}
+
+.heading {
+    font-weight: 700;
+}
+
+.hour {
+    margin-top: 1px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.ratings i {
+    color: #fff;
+}
+
+.btn {
+    border-radius: 15px !important;
+}
+
+.line-color {
+    color: green;
+    height: 3px;
+}
+
+.ratings i {
+    color: #800080;
+}
+
+.install span {
+    font-size: 12px
+}
+
+
+/* steps */

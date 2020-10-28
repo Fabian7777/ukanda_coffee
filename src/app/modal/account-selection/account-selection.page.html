@@ -1,0 +1,63 @@
+<ion-header translucent>
+    <ion-toolbar color="coffeedark">
+        <ion-title>Account</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="close_page()">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div style="width: 100%;">
+        <div class="modal-content">
+
+            <div class="modal-body p-0">
+                <div class="crop">
+                    <img src="assets/images/account.png" width="100%">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+
+            <p style="margin-top: -2rem;">
+                Please choose the type of account you want to register
+            </p>
+            <ion-list style="width: 100%;  --ion-background-color: #ECEFF1;">
+                <ion-radio-group [(ngModel)]="accounts.selected_type">
+                    <ion-item>
+                        <ion-label>Personal Account</ion-label>
+                        <ion-radio slot="start" value="1"></ion-radio>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Business Account</ion-label>
+                        <ion-radio slot="start" value="2"></ion-radio>
+                    </ion-item>
+
+                </ion-radio-group>
+            </ion-list>
+
+            <ion-button color="mygreen" expand="block" style="height: 40px; font-size: 14px; width: 100%;" (click)="choose_account()">
+                SELECT ACCOUNT
+            </ion-button>
+            <p>
+                <label class="text-muted">Here are some of the guidelines of the type of <a href="javascript:void(0)">account</a> you can choose.</label>
+            </p>
+
+            <div class="spinner-border" role="status" style="color: #442a15; flex-direction: column;" *ngIf="isLoading === true">
+                <span class="sr-only">Loading...</span>
+            </div>
+
+            <figure *ngIf="guides.length > 0" style="width: 100%;">
+                <div *ngFor="let data of guides" style="width: 100%; ">
+                    <app-accounts title="{{data.ag_title}}" mydata="{{data.ag_details}}"></app-accounts>
+                </div>
+            </figure>
+
+        </div>
+    </div>
+
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="coffeelight" class="ion-no-border">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Create Account</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<app-share></app-share>
+
+<ion-content>
+
+    <div class="card p-3">
+        <div class="logo mb-3 mt-2" style="display: flex;">
+            <img src="assets/images/logo.png" style="background-color: #fff; width: 5rem; height: 5rem; border-radius: 50%;">
+
+            <h4 class="ml-2 mt-4" style="color: #fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                {{account_type}}
+            </h4>
+        </div>
+    </div>
+
+    <div class="card two px-5 py-4">
+
+        <div class="mt-4" *ngIf="isLoading === true">
+            <div style="position: relative; margin-left: 2rem;">
+                <div style=" display: table; margin: 0 auto; ">
+                    <div class="spinner-border text-success" role="status" style="text-align: center;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p>
+                        <span class="text-muted" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: -2rem;">Configuring...</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-left: -1.8rem; margin-right: -2rem;" *ngIf="isLoading === false">
+            <ion-item *ngIf="account_type === 'Business Account' ">
+                <ion-label position="stacked">Company name <span class="text-danger">*</span> </ion-label>
+                <ion-input [(ngModel)]="registerData.company" type="text" autocomplete="off" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">First name <span class="text-danger">*</span> </ion-label>
+                <ion-input [(ngModel)]="registerData.firstname" type="text" autocomplete="off" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">Last name <span class="text-danger">*</span> </ion-label>
+                <ion-input [(ngModel)]="registerData.lastname" type="text" autocomplete="off" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">Gender <span class="text-danger">*</span> </ion-label>
+                <ion-select okText="Choose" cancelText="Dismiss" interface="action-sheet" [(ngModel)]="registerData.gender">
+                    <ion-select-option value="Male">Male</ion-select-option>
+                    <ion-select-option value="Female">Female</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">Country <span class="text-danger">*</span> </ion-label>
+                <ionic-selectable [(ngModel)]="registerData.country" [items]="display_countries_data" itemValueField="country_id" itemTextField="country_name" [canSearch]="true" [hasInfiniteScroll]="true">
+                </ionic-selectable>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">Contact <span class="text-danger">*</span> </ion-label>
+                <ion-input type="tel" [(ngModel)]="registerData.contact" mask="(000) 000-000-000" maxlength="17"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">Email <span class="text-danger ">*</span> </ion-label>
+                <ion-input type="email " autocomplete="off" required [(ngModel)]="registerData.email" mask="A*@A*.S*" [dropSpecialCharacters]="false"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked ">Password <span class="text-danger ">*</span> </ion-label>
+                <ion-input type="password" [(ngModel)]="registerData.password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked ">Repeat password <span class="text-danger ">*</span> </ion-label>
+                <ion-input type="password" [(ngModel)]="repeat_password"></ion-input>
+            </ion-item>
+
+            <ion-button color="mygreen " expand="block " style="height: 40px; font-size: 14px; margin-top: 10px; " (click)="register()">
+                REGISTER
+            </ion-button>
+
+        </div>
+
+    </div>
+
+
+</ion-content>

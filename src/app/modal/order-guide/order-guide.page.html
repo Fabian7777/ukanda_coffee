@@ -1,0 +1,127 @@
+<ion-header translucent>
+    <ion-toolbar color="coffeedark">
+        <ion-title>Order Guide</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="dismiss_modal()">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="card p-2 card-1 rounded">
+            <div class="row justify-content-between p-2">
+                <div class="col-auto">
+                    <div class="text-left">
+                        <h5 class="mb-0 font-weight-bold">
+                            Simplified order guide
+                        </h5>
+                        <h6>
+                            We'll help you create your order
+                        </h6>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card card-inner">
+                        <div class="media flex-column flex-sm-row p-2 mt-3"><img class="align-self-center mr-3 img-fluid" src="assets/images/guide.png" height="120" style="width: 100%; margin-top: -1.53rem;">
+                            <div class="media-body" style="width: 100%;">
+
+                                <p class="mt-0">
+                                    Choose your coffee type
+                                </p>
+
+                                <form style="margin-top: -1rem; margin-bottom: -.5rem;">
+                                    <div class="radiobtn">
+                                        <input type="radio" id="huey1" name="drone1" value="huey1" />
+                                        <label for="huey1">Green Coffee</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="dewey1" name="drone1" value="dewey1" />
+                                        <label for="dewey1">Dewey</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="louie1" name="drone1" value="louie1" />
+                                        <label for="louie1">Louie</label>
+                                    </div>
+
+                                </form>
+                                <hr>
+                                <p style="margin-top: -.5rem;">
+                                    Choose your coffee grade
+                                </p>
+                                <form style="margin-top: -1rem; margin-bottom: -.5rem;">
+                                    <div class="radiobtn">
+                                        <input type="radio" id="huey" name="drone" value="huey" />
+                                        <label for="huey">Green Coffee</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="dewey" name="drone" value="dewey" />
+                                        <label for="dewey">Dewey</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="louie" name="drone" value="louie" />
+                                        <label for="louie">Louie</label>
+                                    </div>
+
+                                </form>
+
+                                <hr>
+                                <p style="margin-top: -.5rem;">
+                                    Choose your coffee quantity
+                                </p>
+                                <form style="margin-top: -1rem; margin-bottom: -.5rem;">
+                                    <div class="radiobtn">
+                                        <input type="radio" id="huey2" name="drone2" value="huey" />
+                                        <label for="huey2">Green Coffee</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="dewey2" name="drone2" value="dewey" />
+                                        <label for="dewey2">Dewey</label>
+                                    </div>
+
+                                    <div class="radiobtn">
+                                        <input type="radio" id="louie2" name="drone2" value="louie" />
+                                        <label for="louie2">Louie</label>
+                                    </div>
+
+                                </form>
+
+                                <hr>
+
+                                <ion-item style="--ion-background-color:#fff; margin-top: -1rem;">
+                                    <ion-label position="stacked">Number of packets</ion-label>
+                                    <ion-input type="number"></ion-input>
+                                </ion-item>
+
+
+                                <div class="mt-2">
+
+                                    <ion-button color="coffeedark" expand="block" size="default">
+                                        <ion-badge color="danger">2</ion-badge> &nbsp;
+                                        <ion-icon name="cart" slot="start"></ion-icon> Add to cart
+                                        <ion-ripple-effect></ion-ripple-effect>
+                                    </ion-button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</ion-content>

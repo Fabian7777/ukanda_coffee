@@ -1,0 +1,15 @@
+ion-content {
+    --ion-background-color: #fff9ee !important;
+    font-family: sans-serif;
+}
+
+ion-card-header {
+    //background-color: map-get($colors, mygreen);
+    background-color: var(--ion-color-coffeelight);
+    color: #ffffff;
+}
+
+ion-card-content {
+    padding: 0px 16px;
+    max-height: 0px;
+}
