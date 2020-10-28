@@ -73,6 +73,8 @@ export class LoginPage implements OnInit {
         // success message
         this.Notify.toast_with_icon_color('checkmark-circle-sharp', myresponsedata.msg, 'mygreen')
 
+        let authdata = {token:myresponsedata?.jwt,source:myresponsedata?.token_source};
+        localStorage.setItem('AuthData', JSON.stringify(authdata));
         // create localstorage to assign data
         //localStorage.setItem('device_token', JSON.stringify(myresponsedata.jwt));
 

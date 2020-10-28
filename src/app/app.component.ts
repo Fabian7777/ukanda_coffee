@@ -60,7 +60,6 @@ export class AppComponent implements OnInit {
     this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString('#573f2c');
     this.splashScreen.hide();
-
   }
 
   ngOnInit() {
