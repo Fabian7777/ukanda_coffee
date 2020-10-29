@@ -14,7 +14,7 @@
                             {{accountData?.firstname}} {{accountData?.lastname}}
                         </h6>
                         <h6 class="heading" *ngIf="!accountData">
-                            <ion-skeleton-text animated style="width: 50%; height: 20px;"></ion-skeleton-text>
+                            <ion-skeleton-text animated style="width: 50%; height: 1.25rem; margin-top: -1rem;"></ion-skeleton-text>
                         </h6>
 
                         <div class="time d-flex flex-row align-items-center justify-content-between mt-1" *ngIf="accountData">
@@ -27,16 +27,17 @@
                                 </span>
                             </div>
                         </div>
+
                         <div class="time d-flex flex-row align-items-center justify-content-between mt-1" *ngIf="!accountData">
                             <div class="d-flex align-items-center">
-                                <ion-skeleton-text animated style="width: 30px; height: 20px;"></ion-skeleton-text>
+                                <ion-skeleton-text animated style="width: 1.875rem; height: 1.25rem; margin-top: -1rem;"></ion-skeleton-text>
                                 <span class="hour ml-1">
-                                    <ion-skeleton-text animated style="width: 50px; height: 20px;"></ion-skeleton-text>
+                                    <ion-skeleton-text animated style="width: 3.125rem; height: 20px; margin-top: -1rem;"></ion-skeleton-text>
                                 </span>
                             </div>
                             <div>
                                 <span class="font-weight-bold" style="margin-right: 3.2rem; margin-top: 1rem;">
-                                    <ion-skeleton-text animated style="width: 50px; height: 20px;"></ion-skeleton-text>
+                                    <ion-skeleton-text animated style="width: 1.25rem; height: 1.25rem;"></ion-skeleton-text>
                                 </span>
                             </div>
                         </div>
@@ -44,11 +45,14 @@
 
                     </div>
                     <div class="second d-flex flex-row mt-2">
-                        <div class="image mr-3">
-                            <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" />
+                        <div class="image mr-3" *ngIf="accountData">
+                            <img src="http://ukandaledge.com/app/api_v4/uploads/profiles/{{accountData.user_profile}}" class="rounded-circle" width="60" *ngIf="accountData?.token_source === 'system' ">
+                        </div>
+                        <div class="image mr-3" *ngIf="!accountData" style="margin-top: -2rem;">
+                            <ion-skeleton-text animated style="width: 4.5rem; height: 4.5rem; border-radius: 50%; margin-right: .5rem;"></ion-skeleton-text>
                         </div>
 
-                        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" *ngIf="accountData">
                             <div class="row">
                                 <div class="mb-1">
                                     <span class="mr-2">@{{accountData?.firstname | lowercase}}</span>
@@ -61,6 +65,19 @@
 
                             </div>
                         </div>
+
+                        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-top: -2rem;" *ngIf="!accountData">
+                            <div class="row">
+                                <div class="mb-1">
+                                    <ion-skeleton-text animated style="width: 8rem; height: 1.25rem;"></ion-skeleton-text>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ion-skeleton-text animated style="width: 5rem; height: 2.25rem;"></ion-skeleton-text>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

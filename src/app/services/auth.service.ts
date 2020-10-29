@@ -126,32 +126,6 @@ export class AuthService implements HttpInterceptor {
      this.cart_count.next(0);
    }
 
-   /* post_without_tokens(credentials, type) {
-    const myheaders = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*'
-    }
-     this.http.sendRequest(this.server + type, 
-      {
-        method: 'post',
-        data: credentials,
-        headers: myheaders,
-        timeout: 6000
-     })
-    .then(response => {
-        // prints 200
-        console.log(response);
-        return response;
-      })
-      .catch(response => {
-        // prints 403
-        console.log(response);
-        return response;
-      });
-      
-  } */
-
   post_without_tokens(credentials, type) {
     const headers = new HttpHeaders({timeout: `${this.mydefault_request_timeout}`});
     headers.append('Accept', 'application/json');
@@ -217,8 +191,14 @@ export class AuthService implements HttpInterceptor {
   }
 
   get_without_tokens(type) {
+    const httpHeader = {
+      headers: new HttpHeaders(
+        {
+          timeout: `${this.mydefault_request_timeout}`    
+      })
+    };
     return new Promise((resolve, reject) => {
-     this.http.get(this.server + type)
+     this.http.get(this.server + type, httpHeader)
      .pipe(retry(2))
       .subscribe(res => {
        resolve(res);
