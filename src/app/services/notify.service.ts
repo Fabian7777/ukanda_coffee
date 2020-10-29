@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
+import { error } from 'protractor';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -9,7 +11,7 @@ export class NotifyService {
   page_title = "Ukanda Coffee";
   isLoading = false;
   
-  constructor(public loadingController: LoadingController, public toastCtrl: ToastController,public authService: AuthService) {
+  constructor(public loadingController: LoadingController, public toastCtrl: ToastController,public authService: AuthService, private router: Router) {
     
   }
   async toast_with_icon_color(icon,parsedtest,mycolor) {
@@ -36,6 +38,13 @@ export class NotifyService {
     //check error
     if(errordata.error.error){
       this.toast_with_icon_color('close-circle-sharp',errordata.error.error,'danger')
+      //check if there is an invalid token error
+      if(errordata.error.error === 'Access denied.Invalid request tokens'){
+        //redirect to login
+        this.router.navigate(['/login']);
+        
+      }
+
     }else if(errordata.name){
       this.toast_with_icon_color('close-circle-sharp',errordata.name,'danger')
     }

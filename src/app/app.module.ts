@@ -23,7 +23,9 @@ import { IonicSelectableModule } from 'ionic-selectable';
 import {NgxMaskIonicModule} from 'ngx-mask-ionic'
 import { FCM } from '@ionic-native/fcm/ngx';
 import { DEFAULT_TIMEOUT } from './services/auth.service';
-//import { HTTP } from '@ionic-native/http/ngx';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+import { Diagnostic } from '@ionic-native/diagnostic/ngx';
+import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,7 +45,7 @@ import { DEFAULT_TIMEOUT } from './services/auth.service';
     StatusBar,
     SplashScreen,
     Geolocation,
-    NativeGeocoder,Facebook,CookieService,Firebase, FCM,
+    NativeGeocoder,Facebook,CookieService,Firebase, FCM, AndroidPermissions,Diagnostic,LocationAccuracy,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     [{ provide: HTTP_INTERCEPTORS, useClass: AuthService, multi: true }],
   [{ provide: DEFAULT_TIMEOUT, useValue: 30000 }]

@@ -74,7 +74,11 @@ const routes: Routes = [
   {
     path: 'business-account',
     loadChildren: () => import('./modal/business-account/business-account.module').then( m => m.BusinessAccountPageModule)
+  },  {
+    path: 'location-error',
+    loadChildren: () => import('./errors/location-error/location-error.module').then( m => m.LocationErrorPageModule)
   }
+
 ];
 
 @NgModule({
