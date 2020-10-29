@@ -74,9 +74,8 @@ export class LoginPage implements OnInit {
         this.Notify.toast_with_icon_color('checkmark-circle-sharp', myresponsedata.msg, 'mygreen')
 
         let authdata = {token:myresponsedata?.jwt,source:myresponsedata?.token_source};
+        // save device token
         localStorage.setItem('AuthData', JSON.stringify(authdata));
-        // create localstorage to assign data
-        //localStorage.setItem('device_token', JSON.stringify(myresponsedata.jwt));
 
         this.router.navigate(["/home"]);
 
